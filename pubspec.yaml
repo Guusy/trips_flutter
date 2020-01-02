@@ -72,7 +72,7 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
   assets:
-    - assets/img/traveller.jpg
+    - assets/img/
 
   fonts:
     - family: Lato
