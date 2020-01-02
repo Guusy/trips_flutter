@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:trips/review_list.dart';
 import 'description_place.dart';
+import 'gradient_back.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,10 +14,15 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-          appBar: AppBar(
-            title: Text("Trips"),
-          ),
-          body: new DescriptionPlace("Bahamas", 4, "una descripcion")),
+          body: Stack(children: <Widget>[
+            ListView(
+              children: <Widget>[
+                DescriptionPlace("Bahamas", 4, "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando"),
+                ReviewList()
+              ],
+            ),
+            GradientBack()
+          ])),
     );
   }
 }
